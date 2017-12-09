@@ -769,7 +769,7 @@ keyframes inf-bounce {
 #footer {
 	position: fixed;
 	bottom: 0;
-	/*max-width: 1185px;*/
+	max-width: 1185px;
 	width:100%;
 	margin:0 auto 0 auto;
 	padding:0 15px;
