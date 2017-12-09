@@ -1606,3 +1606,11 @@ hr {
 .fa-envelope:hover {
     color: #131314;
 }
+
+#written-time {
+	font-style: italic;
+	font-size: 10px;
+	font-weight: 500;
+	color: #90949C;
+	text-align: right;
+}
