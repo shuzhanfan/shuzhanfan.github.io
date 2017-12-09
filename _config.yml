@@ -1,0 +1,24 @@
+# Basic
+title: Shuzhan Fan
+author: Shuzhan Fan
+description: Shuzhan Fan's personal website.
+
+url:
+
+permalink: /:year/:month/:title/
+
+# Format
+highlighter: plain
+markdown: redcarpet
+redcarpet:
+  extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "strikethrough", "superscript", tables]
+
+# Pagination
+gems: [jekyll-paginate]
+paginate: 10
+paginate_path: "pages/:num/"
+
+# Social
+social:
+    github: shuzhanfan
+    mail: sfan2@lsu.edu
