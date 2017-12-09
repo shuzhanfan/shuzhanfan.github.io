@@ -22,3 +22,6 @@ paginate_path: "pages/:num/"
 social:
     github: shuzhanfan
     mail: sfan2@lsu.edu
+# Plugins
+plugins:
+  - jekyll-seo-tag
