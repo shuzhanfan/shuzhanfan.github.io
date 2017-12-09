@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+    <!DOCTYPE html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="apple-touch-icon" sizes="76x76" href="/assets/images/logo.png">
+    <link rel="icon" type="image/png" href="/assets/images/logo.png">
+
+    <title>The server quit without updating PID file.</title>
+
+    <meta name="keywords" content="Shuzhan2015, shuzhanfan, Shuzhan Fan">
+    <meta name="author" content="Shuzhan Fan">
+    <meta name="description" content="Talking about python, deep learning, remote sensing, <br/> college football, cats, music, etc.">
+
+    <meta property="og:site_name" content="Shuzhan's Blog — A man with a cat">
+    <meta property="og:url" content="/">
+    <meta property="og:title" content="The server quit without updating PID file.">
+    <meta property="og:type" content="article">
+    <meta property="og:description" content="今天在命令行启动MySQL的时候, 报了一个错误, 无法启动. 如下.">
+
+    <!--   Core CSS Files   -->
+    <link href="//cdn.bootcss.com/flex-layout-attribute/1.0.3/css/flex-layout-attribute.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/assets/css/main.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Canonical SEO -->
+    <link rel="canonical" href="/2016/03/the-server-quit-without-updating-pid-file/">
+    <link rel="alternate" type="application/rss+xml" title="Shuzhan's Blog" href="/feed.xml">
+
+    <script src="/assets/js/jekyll-search.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+    <div id="nav" layout="row top-left">
+    <div self="left">
+        <a href="/"><div class="logo logo-isNotVisIfMobile">Shuzhan's Blog</div></a>
+        <a href="/"><div class="logo logo-isVisIfMobile"></div></a>
+    </div>
+
+    <div class="nav-isNotVisIfMobile">
+        <div class="item">
+            <div class="container-2">
+                <span class="icon"><i class="fa fa-search"></i></span>
+                <input type="text" id="search" />
+            </div>
+        </div>
+        <div class="item">
+            <a href="/tags">Blogs</a>
+        </div>
+        <div class="item">
+            <a href="/about">About</a>
+        </div>
+    </div>
+
+    <div class="nav-isVisIfMobile">
+        <div class="item">
+            <div class="container-2">
+                <span class="icon"><i class="fa fa-search"></i></span>
+                <input type="search" id="search" />
+            </div>
+        </div>
+        <div class="item">
+            <a href="/tags">Blogs</a>
+        </div>
+        <div class="item">
+            <a href="/about">About</a>
+        </div>
+    </div>
+</div>
+
+    <div id="content">
+        <div class="container container--header">
+    <h1 class="h1--home-title">The server quit without updating PID file.</h1>
+    <p></p>
+</div>
+
+        <link rel="stylesheet" type="text/css" href="/assets/css/article.css">
+
+<div class="page-wrapper">
+    <div class="container--text">
+        <p>今天在命令行启动MySQL的时候, 报了一个错误, 无法启动. 如下.</p>
+<figure class="highlight"><pre><code class="language-text" data-lang="text">.ERROR! The server quit without updating PID file (/usr/local/var/mysql/WngLMng-MacBook.local.pid).
+</code></pre></figure>
+<p><img src="https://ww3.sinaimg.cn/large/906cb9dbgw1f9ilmfmcqxj21hw0xogt3.jpg" alt=""></p>
+
+<p>解决办法如下, 将MySQL下的对应的err文件删除即可.</p>
+<figure class="highlight"><pre><code class="language-text" data-lang="text">$ rm -r /usr/local/var/mysql/WngLMng-MacBook.local.err
+</code></pre></figure>
+<p><img src="https://ww4.sinaimg.cn/large/906cb9dbgw1f9ilmv0cfej21ia0ykajp.jpg" alt=""></p>
+
+<p>OK!</p>
+
+        <div id="share-bar">
+
+    <div class="share-buttons">
+
+        <a  href="https://twitter.com/intent/tweet?text=The server quit without updating PID file.&url=/2016/03/the-server-quit-without-updating-pid-file/"
+            onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
+            title="Share on Twitter" >
+            <i class="fa fa-twitter share-button"> twitter</i>
+        </a>
+
+        <a  href="http://service.weibo.com/share/share.php?title=The server quit without updating PID file.&url=/2016/03/the-server-quit-without-updating-pid-file/"
+            onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=900,height=500,toolbar=1,resizable=0'); return false;"
+            title="Share on Weibo" >
+            <i class="fa fa-weibo share-button"> weibo</i>
+        </a>
+
+        <a  href="https://plus.google.com/share?url=/2016/03/the-server-quit-without-updating-pid-file/"
+            onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
+            title="Share on Google+" >
+            <i class="fa fa-google-plus share-button"> google</i>
+        </a>
+
+        <a  href="https://www.facebook.com/sharer/sharer.php?u=/2016/03/the-server-quit-without-updating-pid-file/"
+            onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
+            title="Share on Facebook" target="_blank">
+            <i class="fa fa-facebook-official share-button"> facebook</i>
+        </a>
+
+        <a  href="mailto:?subject=The server quit without updating PID file.&amp;body=Check out this site /2016/03/the-server-quit-without-updating-pid-file/"
+            title="Share via Email" >
+            <i class="fa fa-envelope share-button"> email</i>
+        </a>
+        
+        <a  href="http://pinterest.com/pin/create/button/?url=/2016/03/the-server-quit-without-updating-pid-file/"
+            onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=900,height=500,toolbar=1,resizable=0'); return false;"
+            title="Share on Pinterest" >
+            <i class="fa fa-pinterest-p share-button"> pinterest</i>
+        </a>
+
+        <a  href="https://www.linkedin.com/shareArticle?mini=true&url=/2016/03/the-server-quit-without-updating-pid-file/&title=The server quit without updating PID file.&summary=&source=Shuzhan's Blog"
+            onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
+            title="Share on LinkedIn" >
+            <i class="fa fa-linkedin share-button"> linkedin</i>
+        </a>
+
+    </div>
+
+</div>
+
+    </div>
+</div>
+
+<div class="related_posts-container" style="max-width: 790px;">
+    <p class="related_posts-header">RELATED ARTICLES</p>
+
+    <div layout="rows center-spread">
+
+        
+        
+        
+        
+            <a href="/2015/12/memcache-introduce/">
+                <div class="card card--article not-visible" >
+                    <div class="card-body">
+                        <div class="card-title">Memcache简单介绍</div>
+                        <div class="card-description card-description--clamp-0">
+                            最近在学习有关缓存的一些知识，了解到有Memcache和Redis，那我先来介绍一下我目前了解到Memcache吧。有些人可能会在网上看到Memcache和Memcached这两个词，这两个个东西其实不必太在意，只不过Memcache是这个项目的名称，而Memcached是项目的服务端主程序名称。简介Memcached官网Memcache是一个基于内存的，采用key-value的存储方式，能...
+                        </div>
+                    </div>
+                    <div class="card-hero">
+                        <div class="card-image card-image--size-185" data-url="https://ww4.sinaimg.cn/mw690/906cb9dbgw1fayofw6kcmj20jj099jsj.jpg"></div>
+                    </div>
+                    <div class="card-footer">
+                        <div class="card-footer-wrapper" layout="row bottom-left">
+                            <div class="card-type is-notShownIfHover">2015-12-05</div>
+                            <div class="card-tag is-notShownIfHover">@Shuzhan Fan</div>
+                            <div class="card-tag is-shownIfHover">
+                                
+                                    Cat &nbsp;&nbsp;
+                                
+                            </div>
+                            <div class="card-logo is-shownIfHover" self="right"></div>
+                        </div>
+                    </div>
+                 </div>
+            </a>
+        
+        
+
+        
+        
+        
+        
+            <a href="/2016/04/centos-6.4-x32-install-mysql/">
+                <div class="card card--article not-visible" >
+                    <div class="card-body">
+                        <div class="card-title">CentOS 6.4 x32 安装 MySQL</div>
+                        <div class="card-description card-description--clamp-0">
+                            ## MySQL安装这里介绍以 CentOS6.4 X36 安装为例。1. 检测系统是否自带安装 mysql；	```sql	yum list installed | grep mysql	```2. 删除系统自带的 mysql 及其依赖命令；	```sql	yum -y remove mysql-libs.x86_64	```3. 给 CentOS 添加 rpm 源，并且选择较新的源命令；...
+                        </div>
+                    </div>
+                    <div class="card-hero">
+                        <div class="card-image card-image--size-185" data-url="https://ww4.sinaimg.cn/mw690/906cb9dbgw1fayosx67eoj20we0f4juo.jpg"></div>
+                    </div>
+                    <div class="card-footer">
+                        <div class="card-footer-wrapper" layout="row bottom-left">
+                            <div class="card-type is-notShownIfHover">2016-04-16</div>
+                            <div class="card-tag is-notShownIfHover">@Shuzhan Fan</div>
+                            <div class="card-tag is-shownIfHover">
+                                
+                                    code &nbsp;&nbsp;
+                                
+                            </div>
+                            <div class="card-logo is-shownIfHover" self="right"></div>
+                        </div>
+                    </div>
+                 </div>
+            </a>
+        
+        
+
+    </div>
+</div>
+
+
+    </div>
+    <div id="footer" layout="rows center-left">
+    <div id="end-mark">
+        <!-- <div class="end-mark-icon"></div> -->
+        <p class="copyright">SHUZHAN's Blog © 2017</p>
+    </div>
+    <div id="footer-links" self="right">
+        <ul>
+            <!-- <a href="#"><li class="wechat" target="_blank"></li></a> -->
+            <a href="mailto:sfan2@lsu.edu" target="_blank"><li class="mail"></li></a>
+            <a href="https://github.com/shuzhan2015" target="_blank"><li class="github"></li></a>
+        </ul>
+    </div>
+</div>
+
+</body>
+<!--   Core JS Files   -->
+<script src="//cdn.bootcss.com/jquery/2.1.0/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/mixitup/2.1.11/jquery.mixitup.min.js"></script>
+<script src="/assets/js/main.js"></script>
+
+</html>
