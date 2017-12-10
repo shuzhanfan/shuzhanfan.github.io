@@ -1503,6 +1503,12 @@ hr {
 /* All buttons */
 .share-buttons {
 	text-align: right;
+	display: inline-block;
+}
+
+/* Like button*/
+.like-button {
+	padding-right: 10px;
 }
 
 /* Each button */
