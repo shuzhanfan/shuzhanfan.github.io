@@ -5,7 +5,7 @@ subtitle:
 card-image:     /assets/images/hallstat.JPG
 date:           2017-12-06 21:00:00
 tags:           [life]
-topics:          [life, blog]
+topics:         [life]
 post-card-type: image
 ---
 
