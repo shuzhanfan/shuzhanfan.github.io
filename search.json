@@ -7,6 +7,7 @@
       "title"    : "{{ post.title | escape }}",
       "url"      : "{{ site.baseurl }}{{ post.url }}",
       "tags"     : "{{ post.tags | join: ', ' }}",
+      "topics"   : "{{ post.topics | join: ', ' }}",
       "date"     : "{{ post.date | date: '%b %-d, %Y'}}"
 
     } {% unless forloop.last %},{% endunless %}
