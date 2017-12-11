@@ -4,7 +4,8 @@ title:          My first blog
 subtitle:       
 card-image:     /assets/images/hallstat.JPG
 date:           2017-12-06 21:00:00
-tags:           life
+tags:           [life]
+topics:          [life, blog]
 post-card-type: image
 ---
 

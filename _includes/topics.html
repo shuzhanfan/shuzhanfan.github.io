@@ -1,0 +1,8 @@
+<div class="topic-tags">
+        {% for topic in page.topics %}
+            <div class="topic-hash-tag">#{{ topic }}</div>
+        {% endfor %}
+        <a href="/tags">
+            <i class="more-tags-button">More tags</i>
+        </a>
+</div>

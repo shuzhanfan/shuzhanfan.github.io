@@ -1620,3 +1620,30 @@ hr {
 	color: #90949C;
 	text-align: right;
 }
+
+.topic-tags {
+	text-align: left;
+	font-size: 13px;
+    letter-spacing: 0;
+    font-weight: 350;
+    font-style: normal;
+	color: rgba(0,0,0,.55);
+	line-height: 1.4;
+}
+
+.topic-hash-tag {
+	display: inline-block;
+	padding-right: 5px;
+}
+
+.more-tags-button {
+	display: inline-block;
+	color: rgba(0,0,0,.55);
+    background-color: rgba(0,0,0,.08);
+	border-radius: 3px;
+	padding: 2px 5px 2px 5px ;
+}
+
+.more-tags-button:hover {
+	background-color: rgba(0,0,0,.18);
+}
