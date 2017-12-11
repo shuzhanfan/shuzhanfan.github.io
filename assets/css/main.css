@@ -994,7 +994,7 @@ keyframes inf-bounce {
 }
 
 
-@media screen and (max-height: 806px) and (min-width: 1225px) {
+@media screen and (min-width: 1225px) {
 	.container--header {
 		text-align: center;
 	}
