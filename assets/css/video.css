@@ -201,7 +201,7 @@
     color: #000; } }
 
 .support-videos {
-    margin-top: 60px;
+    margin-top: 120px;
 }
 .support-videos .mix {
     background: #fff;
@@ -217,8 +217,5 @@
 }
 .support-videos p {
     text-align: center;
-    font-weight: 400;
-    font-size: 15px;
-    color: rgba(0,0,0,0.6);
 }
 /*# sourceMappingURL=test.css.map */
