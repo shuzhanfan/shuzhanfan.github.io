@@ -9,7 +9,6 @@ categories:     [python, parallel&nbsp;processing]
 post-card-type: image
 ---
 
-## Introduction
 Unlike Javascript, which is naturally asynchronous, Python interpreter executes codes in a sequential order. The subsequent jobs have to wait until the completeness of the previous ones. This behavior sometimes has disadvantages, especially when the processing time for certain jobs in the queue is fairly long and the subsequent jobs do not really rely on the results of previous ones. This raises a question: Could we take advantage of the waiting time in an efficient way and possibly parallelize the workflow of processing of the sequential jobs.
 
 Well, the answer is of course yes. Let me give you an example of a problem I often came across in my work. Everyday I have to run scripts to process satellite data. The scripts will first read raw data files, each file corresponding to one frame (a frame corresponds to a specific area on earth at a specific time). The scripts read data and process them sequentially, one at a time. This is highly inefficient and takes a lot of time for the whole processing to be done. I was then thinking if there is a way to make the processing of the different files parallel, which means they are all processed concurrently. And Python [`subprocess`](https://docs.python.org/3/library/subprocess.html) module came to the rescue.
