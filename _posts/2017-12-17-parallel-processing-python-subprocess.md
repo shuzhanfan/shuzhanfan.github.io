@@ -2,10 +2,10 @@
 layout:         post
 title:          Using Python subprocess for parallel processing
 subtitle:       
-card-image:     
+card-image:     /assets/images/parallel-roads.jpg
 date:           2017-12-17 10:00:00
 tags:           [python]
-categories:     [python, parallel processing]
+categories:     [python, parallel&nbsp;processing]
 post-card-type: image
 ---
 
