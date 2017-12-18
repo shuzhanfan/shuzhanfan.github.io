@@ -1651,8 +1651,9 @@ hr {
 }
 
 .like-button-index {
-	padding-left: 85px;
+	padding-left: 80px;
 	padding-bottom: 3px;
 	opacity: 0.9;
+	font-style: italic;
 }
 
