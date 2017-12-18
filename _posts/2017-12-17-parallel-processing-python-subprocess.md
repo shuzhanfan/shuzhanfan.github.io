@@ -21,7 +21,7 @@ One common scenario you might want to use `subprocess` is when you want to start
 
 For example, you are writing a *`process_data.py`* program which performs some data processing work. However, the raw data files are compressed (e.g. they are some bz2 files) in order to reduce space storage.  The compressed files need to be uncompressed first. This uncompressing task is performed by a *`bunzip2_file.py`* program. Normally, you don’t want to bother to run *`bunzip2_file.py`* command in the terminal first and then run *`process_data.py`*. It will be more convenient to just run *`process_data.py`*. And within this program, it will spawn a subprocess, invoking *`bunzip2_file.py`*.  Let’s take a look at the codes:
 
-```python
+{% highlight python %}
 from subprocess import Popen, PIPE
 
 cmd_list = ['./bunzip2_file.py', 'file_name']
@@ -32,7 +32,7 @@ if stdout:
 	print stdout
 if stderr:
 	print stderr
-```
+{% endhighlight %}
 
 First we import `subprocess` functions `Popen` and `PIPE`. `Popen` is the class which handles process creation and management in the module. It could take a series of arguments. You may refer to the [official subprocess documentation](https://docs.python.org/3/library/subprocess.html#subprocess.Popen) for the full `Popen` arguments list. Most of the time you only need to pass arguments _**cmd_list**_, _**stdout**_ and _**stderr**_, and sometimes _**shell**_ boolean value.
 
@@ -44,7 +44,7 @@ Now, suppose you have multiple compressed files, if you don’t use any parallel
 
 We can use `subprocess` module to create multiple child processes and they are run in parallel.
 
-```python
+{% highlight python %}
 from subprocess import Popen, PIPE
 import glob
 
@@ -53,7 +53,7 @@ cmds_list = [['./bunzip2_file.py', file_name] for file_name in f_list]
 procs_list = [Popen(cmd, stdout=PIPE, stderr=PIPE) for cmd in cmds_list]
 for proc in procs_list:
 	proc.wait()
-```
+{% endhighlight %}
 
 First, we search the current directory and obtain a list of all the compressed files. Next, we create a list of the sequence of program arguments, each list element corresponding to each file. Then, we create a process list using `Popen` for each command. Finally, we wait for the child processes to terminate. Plain and simple.
 
