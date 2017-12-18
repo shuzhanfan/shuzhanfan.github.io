@@ -45,6 +45,9 @@ h1 {
 	.container--header {
 			margin: 60px auto 40px auto;
 	}
+	.like-button-index {
+	padding-left: 40px;
+	}
 }
 @media screen and (max-height: 700px) and (min-width: 1225px) {
 
