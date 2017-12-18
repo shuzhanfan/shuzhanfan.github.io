@@ -1649,3 +1649,10 @@ hr {
 .more-tags-button:hover {
 	background-color: rgba(0,0,0,.18);
 }
+
+.like-button-index {
+	padding-left: 85px;
+	padding-bottom: 3px;
+	opacity: 0.9;
+}
+
