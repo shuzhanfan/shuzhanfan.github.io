@@ -49,6 +49,13 @@ h1 {
 	padding-left: 40px;
 	}
 }
+
+@media only screen and (max-width: 363px) {
+	.like-button-index {
+	padding-left: 20px;
+	}
+}	
+
 @media screen and (max-height: 700px) and (min-width: 1225px) {
 
 }
