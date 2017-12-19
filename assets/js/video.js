@@ -6,7 +6,7 @@ var videoUrl = getUrlParam('url');
 if (!videoUrl) {
     videoUrl = 'https://v.qq.com/x/cover/t5jqhgw8pix81mw/v0024wohpa1.html';
 }
-$("#videoIframe").attr('src', 'http://www.dgua.xyz/webcloud/?url=' + videoUrl);
+$("#videoIframe").attr('src', 'https://www.dgua.xyz/webcloud/?url=' + videoUrl);
 
 (function() {
     var s = $('input'),
@@ -37,7 +37,7 @@ $("#videoIframe").attr('src', 'http://www.dgua.xyz/webcloud/?url=' + videoUrl);
         var videoUrl = document.getElementById('videoSearchInput').value;
         f.addClass('explode');
         setTimeout(function(){
-            $("#videoIframe").attr('src', 'http://www.dgua.xyz/webcloud/?url=' + videoUrl);
+            $("#videoIframe").attr('src', 'https://www.dgua.xyz/webcloud/?url=' + videoUrl);
             history.pushState('', '', '?url=' + videoUrl);
             s.val('');
             f.removeClass('explode');
