@@ -6,7 +6,7 @@ var videoUrl = getUrlParam('url');
 if (!videoUrl) {
     videoUrl = 'https://v.qq.com/x/cover/t5jqhgw8pix81mw/v0024wohpa1.html';
 }
-$("#videoIframe").attr('src', 'http://v.buy360.vip/cxjx.php?v=' + videoUrl);
+$("#videoIframe").attr('src', 'http://api.47ks.com/webcloud/?v=' + videoUrl);
 
 (function() {
     var s = $('input'),
@@ -37,7 +37,7 @@ $("#videoIframe").attr('src', 'http://v.buy360.vip/cxjx.php?v=' + videoUrl);
         var videoUrl = document.getElementById('videoSearchInput').value;
         f.addClass('explode');
         setTimeout(function(){
-            $("#videoIframe").attr('src', 'http://v.buy360.vip/cxjx.php?v=' + videoUrl);
+            $("#videoIframe").attr('src', 'http://api.47ks.com/webcloud/?v=' + videoUrl);
             history.pushState('', '', '?url=' + videoUrl);
             s.val('');
             f.removeClass('explode');
