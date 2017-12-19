@@ -4,7 +4,7 @@ var getUrlParam = function(name) {
 };
 var videoUrl = getUrlParam('url');
 if (!videoUrl) {
-    videoUrl = 'http://www.iqiyi.com/v_19rrn8h3xg.html?fc=8b62d5327a54411b#vfrm=19-9-0-1';
+    videoUrl = 'https://v.qq.com/x/cover/t5jqhgw8pix81mw/v0024wohpa1.html';
 }
 $("#videoIframe").attr('src', 'http://www.dgua.xyz/webcloud/?url=' + videoUrl);
 
@@ -37,7 +37,7 @@ $("#videoIframe").attr('src', 'http://www.dgua.xyz/webcloud/?url=' + videoUrl);
         var videoUrl = document.getElementById('videoSearchInput').value;
         f.addClass('explode');
         setTimeout(function(){
-            $("#videoIframe").attr('src', 'https://api.47ks.com/webcloud/?v=' + videoUrl);
+            $("#videoIframe").attr('src', 'http://www.dgua.xyz/webcloud/?url=' + videoUrl);
             history.pushState('', '', '?url=' + videoUrl);
             s.val('');
             f.removeClass('explode');
