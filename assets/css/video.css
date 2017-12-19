@@ -201,11 +201,12 @@
     color: #000; } }
 
 .support-videos {
-    margin-top: 120px;
+    margin-top: 40px;
 }
 .support-videos .mix {
     background: #fff;
     margin: 10px auto;
+    margin-bottom: 30px;
     border-radius: 3px;
     box-shadow: 0px 2px 40px 0px rgba(0,0,0,0.08);
 }
