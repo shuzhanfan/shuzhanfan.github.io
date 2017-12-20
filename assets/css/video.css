@@ -219,4 +219,10 @@
 .support-videos p {
     text-align: center;
 }
+
+.like-button-video {
+    text-align: right;
+    font-style: italic;
+    padding-top: 20px;
+}
 /*# sourceMappingURL=test.css.map */
