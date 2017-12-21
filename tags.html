@@ -13,7 +13,7 @@ layout: default
 				</div>
 				<div id="filters">
 					<div class="filter-tab">
-						{% assign sorted_tags = (site.tags | sort) %}
+						{% assign sorted_tags = site.tags | sort %}
 						<li class="filter sidebar-link" data-filter="all"><a data-scroll class="selected" href="#" data-type="all">ALL</a></li>
 						{% for tag in sorted_tags %}
 						<li class="filter sidebar-link" data-filter=".{{ tag[0] }}">
