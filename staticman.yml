@@ -58,9 +58,8 @@ comments:
   notifications:
     # Enable notifications
     enabled: true
-    domain: "u/uXeWrnlpE3N4arFZwkLGE2P9jhgF+BOizQEZ2Ylock8ZGc6m0EuBfoSThiL46+EUauswjfGb6JkkGJSx0E5n4VarznPBODPsDAChxR4BYkitBR9cEe3Brg918VfYbPKUlYWcuJTVtM8A3JS6AbXr5222/dMwzPh0cXMqffh5M="
-    apiKey: "Rxb7fzveWN2+5xOoOllvB2SN04APcCiYxTO6MaKU8SjQABUAzZLQwGtlQRMRTcV3Zqsbcj4Pygb1xdmsYOynrVU+n+jkdaoteFCiKqPQcHbm62JMraUvysGP+pY8OtLCAHG6/8YqydH1JmtQGE+zWghJ6pxTHu8cjznvXPZPYrc="
-
+    domain: "j1Te+KRjMLRbnFut5BVaFGiBMbh0PIzxMvMkKBVOdFHWm80JdR6IziqXw4G4yFRmh6iW2abOr5AcA96xJQCDLpy33h8FMhzQ3uft8vrAlxeBcJChXowuA5XuZSI7NCZcc6hIJpkSkduWm2JW1ME/FPcloLj+8GGxniJFThHEg1w="
+    apiKey: "EkLHJAo2uJimZ7xO1e0QmZFzLNVp4nqBekfJH7jHwjM8rCevJYFhYJ8pQDqlJ1f2y8XXAqWDmoCEsXVb8IOUrnXD3zFjZXL6gJPolnjyrkE9ezbpGSXAhiLko6oAaOInmqfAU1nW0YZGRA21UqG7TdyBi3fBnN6TeFvD9m+yMKU="
     # (!) ENCRYPTED
     #
     # Mailgun API key
