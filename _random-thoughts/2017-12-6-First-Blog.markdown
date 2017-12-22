@@ -6,6 +6,7 @@ card-image:     /assets/images/hallstat.JPG
 date:           2017-12-06 21:00:00
 tags:           [life]
 post-card-type: image
+slug:           test123
 ---
 
 This is my first blog, EVER! I've always been thinking of writing something about the work I do, sharing the knowledge I know, and of course, learning new stuff in turn. Now finally I made my decision to at least get myself started. Before I continue, I'd like to talk about my research and work first.
