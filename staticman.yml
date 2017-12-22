@@ -1,7 +1,3 @@
-# Name of the property. You can have multiple properties with completely
-# different config blocks for different sections of your site.
-# For example, you can have one property to handle comment submission and
-# another one to handle posts.
 comments:
   # (*) REQUIRED
   #
@@ -42,7 +38,7 @@ comments:
     date:
       type: date
       options:
-        format: "timestamp-seconds"
+        format: "iso8601"
 
   # Whether entries need to be appproved before they are published to the main
   # branch. If set to `true`, a pull request will be created for your approval.
@@ -62,12 +58,13 @@ comments:
     # (!) ENCRYPTED
     #
     # Mailgun API key
-    #apiKey: "1q2w3e4r"
+    apiKey: "EkLHJAo2uJimZ7xO1e0QmZFzLNVp4nqBekfJH7jHwjM8rCevJYFhYJ8pQDqlJ1f2y8XXAqWDmoCEsXVb8IOUrnXD3zFjZXL6gJPolnjyrkE9ezbpGSXAhiLko6oAaOInmqfAU1nW0YZGRA21UqG7TdyBi3fBnN6TeFvD9m+yMKU="
 
     # (!) ENCRYPTED
     #
     # Mailgun domain (encrypted)
-    #domain: "4r3e2w1q"
+    domain: "j1Te+KRjMLRbnFut5BVaFGiBMbh0PIzxMvMkKBVOdFHWm80JdR6IziqXw4G4yFRmh6iW2abOr5AcA96xJQCDLpy33h8FMhzQ3uft8vrAlxeBcJChXowuA5XuZSI7NCZcc6hIJpkSkduWm2JW1ME/FPcloLj+8GGxniJFThHEg1w="
+
 
   # (*) REQUIRED
   #
@@ -87,6 +84,4 @@ comments:
   reCaptcha:
     enabled: true
     siteKey: "6Le4_T0UAAAAAJFB-3XtwuU86hxsw22z68niAPz3"
-    secret: "6Le4_T0UAAAAAHv8J_MsFbGLRpwMBKFEtzv2SHv7"
-
-    
+    secret: "shn6WLdmu/HtyFh5KxOvdCYwNqscJlvhzq9bH+B0PfoJ0nr4GSRsbQ1587rk7rdeNth58GoSedk2daB4IUjFqHZQQe27UrtwBaIoVG9nT8tbX9vhpzmYidoaFeE1GNdlCN9d+OZj+3uBylR3CGoR5jKNIVX5BueR6S1QxUGqT1g="
