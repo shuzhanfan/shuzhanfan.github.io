@@ -4,6 +4,7 @@ author: Shuzhan Fan
 description: Shuzhan Fan's personal website.
 
 repository: shuzhanfan/shuzhanfan.github.io
+baseurl: ""
 url: https://shuzhanfan.github.io
 
 permalink: /:year/:month/:title/
