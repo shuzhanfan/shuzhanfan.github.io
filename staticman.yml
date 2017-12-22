@@ -58,8 +58,8 @@ comments:
   notifications:
     # Enable notifications
     enabled: true
-    domain: "sandbox9f7ad2cad1b744e3b9eef142dd046ea3.mailgun.org"
-    apiKey: "key-57693ce139d2b859a47a20f7a0e5b93a"
+    domain: "u/uXeWrnlpE3N4arFZwkLGE2P9jhgF+BOizQEZ2Ylock8ZGc6m0EuBfoSThiL46+EUauswjfGb6JkkGJSx0E5n4VarznPBODPsDAChxR4BYkitBR9cEe3Brg918VfYbPKUlYWcuJTVtM8A3JS6AbXr5222/dMwzPh0cXMqffh5M="
+    apiKey: "Rxb7fzveWN2+5xOoOllvB2SN04APcCiYxTO6MaKU8SjQABUAzZLQwGtlQRMRTcV3Zqsbcj4Pygb1xdmsYOynrVU+n+jkdaoteFCiKqPQcHbm62JMraUvysGP+pY8OtLCAHG6/8YqydH1JmtQGE+zWghJ6pxTHu8cjznvXPZPYrc="
 
     # (!) ENCRYPTED
     #
@@ -88,5 +88,5 @@ comments:
   # reCaptcha
   reCaptcha:
     enabled: true
-    siteKey: "6Le4_T0UAAAAAJFB-3XtwuU86hxsw22z68niAPz3"
-    secret: "6Le4_T0UAAAAAHv8J_MsFbGLRpwMBKFEtzv2SHv7"
+    siteKey: "0HEyV+zqAJxfrLCnZ1NVN+oQAPpla4/vKx8JKhPHV5ZkduzAS1DGi3esFfa+ZgFdS0f5T3H7mSdy69UnELZvKeDmDxOPulhneMzb+haHeyOsg3bdFBR+IbwbgyNgS11SZD6a2gr767Z2ZlwUPwGOhJdk+grcZoQ4m+63/Nm5ZHA="
+    secret: "II3Uixj3tR7LkVbaM1w/ERycKOwOkWIobB+PhusjrCEPta5fSFT90JkbXmEZX2KT4BMWBtSdzy6Sx3xyeUGSRzMCyjhkCsB+WPEh+QmaYQ8wyjPY/ET2g8m2qY8HFdDv3uqvXnzPAiz0kYaQHGCQgnk3QjNzNaXtGHSTu5m+W7U="
