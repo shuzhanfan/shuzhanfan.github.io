@@ -3,7 +3,14 @@ comments:
   #
   # Names of the fields the form is allowed to submit. If a field that is
   # not here is part of the request, an error will be thrown.
-  allowedFields: ["name", "email", "url", "message"]
+  allowedFields: ["name", "email", "url", "message", "replying_to"]
+
+  # (*) REQUIRED WHEN USING NOTIFICATIONS
+  #
+  # When allowedOrigins is defined, only requests sent from one of the domains
+  # listed will be accepted. The origin is sent as part as the `options` object
+  # (e.g. <input name="options[origin]" value="http://yourdomain.com/post1")
+  allowedOrigins: ["shuzhanfan.github.io"]
 
   # (*) REQUIRED
   #
@@ -12,7 +19,7 @@ comments:
   branch: "master"
 
   # Text to use as the commit message or pull request title. Accepts placeholders.
-  commitMessage: "Add Staticman data"
+  commitMessage: "New comment"
 
   # (*) REQUIRED
   #
@@ -31,7 +38,7 @@ comments:
     date:
       type: date
       options:
-        format: "timestamp-seconds"
+        format: "iso8601"
 
   # Whether entries need to be appproved before they are published to the main
   # branch. If set to `true`, a pull request will be created for your approval.
@@ -44,9 +51,9 @@ comments:
   # Notification settings. When enabled, users can choose to receive notifications
   # via email when someone adds a reply or a new comment. This requires an account
   # with Mailgun, which you can get for free at http://mailgun.com.
-  #notifications:
+  notifications:
     # Enable notifications
-    #enabled: true
+    enabled: true
 
     # (!) ENCRYPTED
     #
@@ -71,3 +78,9 @@ comments:
   # the name of the field and values are possible transformation types.
   transforms:
     email: md5
+
+  # reCaptcha
+  reCaptcha:
+    enabled: true
+    siteKey: "6Le4_T0UAAAAAJFB-3XtwuU86hxsw22z68niAPz3"
+    secret: "6Le4_T0UAAAAAHv8J_MsFbGLRpwMBKFEtzv2SHv7"
