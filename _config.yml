@@ -3,6 +3,7 @@ title: Shuzhan Fan
 author: Shuzhan Fan
 description: Shuzhan Fan's personal website.
 
+repository: shuzhanfan/shuzhanfan.github.io
 url: https://shuzhanfan.github.io
 
 permalink: /:year/:month/:title/
@@ -32,3 +33,12 @@ collections:
     random-thoughts:
         output: true
         permalink: /:collection/:year/:month/:title/
+
+# Staticman comments (full configuration in staticman.yml)
+staticman:
+    branch                 : "master"
+
+# reCaptcha keys
+reCaptcha:
+    siteKey: "6Le4_T0UAAAAAJFB-3XtwuU86hxsw22z68niAPz3"
+    secret: "6Le4_T0UAAAAAHv8J_MsFbGLRpwMBKFEtzv2SHv7"
