@@ -6,7 +6,6 @@
 			<h3 class="comments__heading heading-2">Comments</h3>
 
 			{% if site.data.comments[post_slug] %}
-				<p>test</p>
 				{% assign comments = site.data.comments[post_slug] | sort %}
 
 				{% for comment in comments %}
