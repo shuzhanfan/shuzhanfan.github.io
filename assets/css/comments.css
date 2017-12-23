@@ -73,6 +73,7 @@
     text-transform: uppercase;
     background: transparent;
     cursor: pointer;
+    margin-bottom: 20px;
 }
 
 .cta:hover {
@@ -162,49 +163,8 @@ $avatar-size-narrow: 50px;
 } */
 
 
-
-
-
-.comments-section-title {
-    position: relative;
-    margin-top: 4rem;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    font-size: 1.563em;
-    margin-bottom: 1rem;
-    line-height: 1;
-    display: block;
-    font-family: Menlo,Consolas,Monaco,Courier New,Courier,monospace;
-    color: #222831;
-}
-
 .form-group {
     margin-bottom: .5rem;
-}
-
-label {
-    margin-bottom: .5em;
-    font-family: Menlo,Consolas,Monaco,Courier New,Courier,monospace;
-    font-size: .8em;
-    display: block;
-    color: #222831;
-    line-height: 1.55;
-    box-sizing: inherit;
-}
-
-textarea {
-    text-rendering: auto;
-    color: initial;
-    letter-spacing: normal;
-    word-spacing: normal;
-    text-transform: none;
-    text-indent: 0px;
-    text-shadow: none;
-    display: inline-block;
-    text-align: start;
-    font: 400 11px system-ui;
-    -webkit-writing-mode: horizontal-tb;
-    box-sizing: inherit;
 }
 
 .comment {
