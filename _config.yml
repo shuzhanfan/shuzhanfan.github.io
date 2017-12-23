@@ -2,7 +2,7 @@
 title: Shuzhan Fan
 author: Shuzhan Fan
 description: Shuzhan Fan's personal website.
-timezone: America/Chicago
+timezone: "-0600"
 
 repository: shuzhanfan/shuzhanfan.github.io
 baseurl: ""
