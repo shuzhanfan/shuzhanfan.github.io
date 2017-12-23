@@ -24,12 +24,10 @@
 
 .text-field:focus {
 		background: #fffff1;
-	}
 }
 
 .text-field:active {
 		background: #fffff1;
-	}
 }
 
 .checkbox {
@@ -40,7 +38,7 @@
     position: relative;
 }
 
-.checkbox__label:before {
+.checkbox__label::before {
     content: ' ';
     display: inline-block;
     width: 25px;
@@ -60,7 +58,7 @@
         left: 0;
         font-family: sans-serif;
         text-align: center;
-    }
+}
 
 .cta {
     position: relative;
@@ -172,61 +170,63 @@ $avatar-size-narrow: 50px;
   margin-bottom: 4em;
   padding-left: 4.5em;
   font-size: 0.8em;
+}
 
+.comment.child {
   // comment replies
-  &.child {
     margin-left: 4.5em;
-  }
 }
 
 .comment-timestamp {
   font-size: 0.8em;
+}
 
-  a {
+
+.comment-timestamp + a {
     color: inherit;
     text-decoration: none;
-  }
 }
 
 .comment-content {
   margin-top: 1em;
+}
 
-  > p,
-  > ul,
-  > ol,
-  > figure,
-  > table {
+.comment-content > p,
+.comment-content > ul,
+.comment-content > ol,
+.comment-content > figure,
+.comment-content > table {
     margin-bottom: 1.5em;
-  }
+}
 
-  ul {
+.comment-content + ul {
     list-style-type: square;
-  }
+}
 
-  li {
+.comment-content + li {
     margin-bottom: 0.5em;
-  }
+}
 
-  li > ul,
-  li > ol {
+.comment-content + li > ul {
     margin-top: 0.5em;
-  }
+}
 
-  img {
+.comment-content + li > ol {
+    margin-top: 0.5em;
+}
+
+.comment-content + img {
     max-width: 100%;
-  }
+}
 
-  .highlighter-rouge {
-    .highlight {
+.comment-content + .highlighter-rouge + .highlight {
       margin-left: 0;
       margin-right: 0;
       padding: 1em;
-    }
+}
 
-    .highlight code {
+.comment-content + .highlighter-rouge + .highlight + .highlight code {
       font-size: 0.8em;
-    }
-  }
 }
 
 .comment-avatar {
@@ -235,8 +235,9 @@ $avatar-size-narrow: 50px;
   left: 0;
   width: 3.25em;
   height: 3.25em;
+}
 
-  &::after {
+.comment-avatar::after {
     position: absolute;
     right: 0.5em;
     bottom: 0.5em;
@@ -246,7 +247,6 @@ $avatar-size-narrow: 50px;
     background-size: 5px 5px;
     content: "";
     z-index: -1;
-  }
 }
 
 .comment-author-name {
@@ -254,24 +254,24 @@ $avatar-size-narrow: 50px;
   margin: 0 0 0.25em;
   font-size: 1.25em;
   line-height: 1;
+}
 
-  a {
+.comment-author-name + a {
     color: inherit;
     text-decoration: none;
-  }
 }
 
 .comment-reply {
   text-align: right;
+}
 
-  a {
+.comment-reply + a {
     text-decoration: none;
+}
 
-    &:hover {
+.comment-reply + a:hover {
       text-decoration: underline;
     }
-  }
-}
 
 .comment-reply-notifications {
   margin: 1rem 0;
@@ -286,8 +286,6 @@ $avatar-size-narrow: 50px;
 }
 
 /* Site author specific */
-.admin {
-  .comment-author-name {
+.admin + .comment-author-name {
     box-shadow: inset 0 -0.25em 0 rgba($warning-color, 0.5);
-  }
-}
+ }
