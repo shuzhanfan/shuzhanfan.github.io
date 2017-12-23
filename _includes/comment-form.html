@@ -7,7 +7,7 @@
     <form id="comment-form" class="page__form js-form form" method="post" action="https://api.staticman.net/v2/entry/{{ site.repository }}/{{ site.staticman.branch }}/comments">
         <input name="options[redirect]" type="hidden" value="https://shuzhanfan.github.io{{ page.url }}">
         <input class="form__field text-field" type="text" name="fields[name]" placeholder="Name" required spellcheck="false"/>
-        <input class="form__field text-field" type="email" name="fields[email]" placeholder="Email address (will not be public)" required spellcheck="false"/>
+        <input class="form__field text-field" type="email" name="fields[email]" placeholder="Email address (used for Gravatar image and reply notifications)" required spellcheck="false"/>
         <input class="form__field text-field" type="url" name="fields[url]" placeholder="Website (optional)"/>
         <textarea class="form__field text-field" rows="10" name="fields[message]" placeholder="Comment (Markdown is accepted)." required spellcheck="true"></textarea>
 
@@ -23,7 +23,7 @@
         </div>
 
         <input id="form-subscribe" type="checkbox" name="options[subscribe]" value="email" class="checkbox" style="display: none;">
-        <label for="form-subscribe" class="form__field checkbox__label">I want to be notified of new comments</label>
+        <label for="form-subscribe" class="form__field checkbox__label">Notify me of replies by email</label>
         <div class="form__recaptcha g-recaptcha" data-sitekey="{{ site.reCaptcha.siteKey }}"></div>
         <input class="cta" type="submit" value="Send" />
 
