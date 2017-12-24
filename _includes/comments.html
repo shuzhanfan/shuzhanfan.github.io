@@ -1,25 +1,28 @@
-{% capture post_slug %}{{ page.slug }}{% endcapture %}
+<div class="page__reactions">
+  {% if site.repository and site.staticman.branch %}
+    {% if site.data.comments[page.slug] %}
+      <!-- Start static comments -->
+      <div id="comments" class="js-comments">
+        <header class="comments-heading">
+          <h3>{% if site.data.comments[page.slug].size > 1 %}{{ site.data.comments[page.slug] | size | append: ' ' }}{% endif %}Comments</h3>
+        </header>
+        {% assign comments = site.data.comments[page.slug] | where_exp: "item", "item.replying_to == ''" %}
+        {% for comment in comments %}
+          {% assign index       = forloop.index %}
+          {% assign r           = comment.replying_to %}
+          {% assign replying_to = r | to_integer %}
+          {% assign avatar      = comment.avatar %}
+          {% assign email       = comment.email %}
+          {% assign name        = comment.name %}
+          {% assign url         = comment.url %}
+          {% assign date        = comment.date %}
+          {% assign message     = comment.message %}
+          {% include comment.html index=index replying_to=replying_to avatar=avatar email=email name=name url=url date=date message=message %}
+        {% endfor %}
+      </div>
+      <!-- End static comments -->
+    {% endif %}
 
-<section class="comments">
-	<div class="constrain--body">
-		<div class="comments__existing js-comments" {% if site.data.comments[post_slug] == null %}aria-hidden="true"{% endif %}>
-			<h3 class="comments__heading heading-2">Comments</h3>
-
-			{% if site.data.comments[post_slug] %}
-				{% assign comments = site.data.comments[post_slug] | sort %}
-
-				{% for comment in comments %}
-					{% assign email = comment[1].email %}
-					{% assign name = comment[1].name %}
-					{% assign url = comment[1].url %}
-					{% assign date = comment[1].date %}
-					{% assign message = comment[1].message %}
-
-					{% include comment.html index=forloop.index email=email name=name url=url date=date message=message %}
-				{% endfor %}
-			{% endif %}
-		</div>
-
-		{% include comment-form.html %}
-	</div>
-</section>
+    {% include comment-form.html %}
+  {% endif %}
+</div>
