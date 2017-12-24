@@ -891,9 +891,25 @@ keyframes inf-bounce {
 	    text-align: center;
 		opacity: 0.4;
 	}
-	#nav div.item {
-		margin: 0px 14px 0 0;
+	#nav {
+		padding: 0 0 0 10px;
+		min-width: 320px;
 	}
+	#nav div.logo-isVisIfMobile{
+		display: inline-block;
+		height: 62px;
+		width:30px;
+		padding: 11px 0px;
+		margin:0px;
+	}
+	#nav div.logo-isNotVisIfMobile{
+		display: none;
+	}
+	#nav div.item {
+		margin: 0px 19px 0 0;
+		display:inline-block;
+	}
+
 	.container--header {
 		text-align: center;
 		width: 80%;
@@ -907,7 +923,7 @@ keyframes inf-bounce {
 		margin-bottom: 12px;
 		margin-top: 32px;
 	}
-	#nav div.nav-isVisIfMobile{
+	/* #nav div.nav-isVisIfMobile{
 		display: inline-block;
 	    float: left;
 	    position: fixed;
@@ -915,7 +931,7 @@ keyframes inf-bounce {
 	}
 	#nav div.nav-isNotVisIfMobile{
 		display: none;
-	}
+	} */
 	h2 {
 		margin-top:0;
 		margin-bottom: 12px;
@@ -988,11 +1004,11 @@ keyframes inf-bounce {
 	}
 }
 
-@media only screen and (max-width: 363px) {
+/* @media only screen and (max-width: 363px) {
 #nav div.item {
 		margin: 0px 8px 0 0;
 }
-}
+} */
 
 
 @media screen and (min-width: 1225px) {

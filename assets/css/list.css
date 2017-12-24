@@ -6,7 +6,7 @@ li {
 }
 
 h1 {
-	margin: 60px 0 16px 0;
+	margin: 0px 0 16px 0;
 }
 .sidebar-link {
 	text-transform: uppercase;
@@ -15,6 +15,7 @@ h1 {
 	font-size: 11px;
 	font-weight: 500;
 	color: #90949C;
+    padding-left: 8px;
 }
 
 li.sidebar-link a {
@@ -50,7 +51,7 @@ hr {
 .container--sidebar {
  	position:relative;
  	top:0;
- 	min-width: 395px;
+ 	min-width: 200px;
  	z-index: 4;
 }
 
@@ -64,7 +65,7 @@ hr {
 	color: #4B4F56;
 }
 
-@media only screen and (max-width: 1225px) {
+@media only screen and (min-width: 700px) {
 	.sidebar-title{
 		display:none;
 	}
@@ -111,66 +112,4 @@ hr {
 	}
 }
 
-@media only screen and (max-width: 890px) {
-	.list-container {
-		width:395px;
-	}
-	.container--sidebar {
-		display:none;
-	}
-	.container--grid {
-		margin-top: 34px;
-	}
-}
-@media only screen and (max-width: 490px) {
-	.list-container {
-    	width: 320px;
-	}
-}
-
-@media screen and (max-height: 910px) and (min-width: 1225px) {
-	h1 {
-		margin:60px 0 20px 0;
-	}
-	li.sidebar-link a {
-		line-height: 40px;
-	}
-
-}
-@media screen and (max-height: 800px) and (min-width: 1225px) {
-	hr {
-		display: none;
-	}
-	.sidebar-medium_button {
-		display: none;
-	}
-}
-
-@media screen and (max-height: 719px) and (min-width: 1225px) {
-	.sidebar {
-	 	position:relative;
-	 	max-width: 300px;
-	 	margin-left: 20px;
-	 	margin-right: 20px;
-	}
-}
-
-@media screen and (max-height: 640px) and (min-width: 1225px) {
-	hr {
-		display: block;
-	}
-	.sidebar-medium_button {
-		display: block;
-	}
-}
-@media screen and (min-height: 640px) and (min-width: 1225px) {
-	.sidebar {
-	 	position:fixed;
-	 	top:66px;
-	 	max-width: 300px;
-	 	margin-left: 20px;
-	 	margin-right: 20px;
-	}
-
-}
 @supports (-webkit-backdrop-filter: none) { .sidebar { background-color: rgba(252, 252, 252, .85); } }
