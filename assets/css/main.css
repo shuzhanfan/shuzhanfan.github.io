@@ -895,13 +895,6 @@ keyframes inf-bounce {
 		padding: 0 0 0 10px;
 		min-width: 320px;
 	}
-	#nav div.logo-isVisIfMobile{
-		display: inline-block;
-		height: 62px;
-		width:30px;
-		padding: 11px 0px;
-		margin:0px;
-	}
 	#nav div.item {
 		margin: 0px 19px 0 0;
 		display:inline-block;
@@ -950,13 +943,6 @@ keyframes inf-bounce {
 	}
 	#footer{
 		max-width: 320px;
-	}
-	#nav div.logo-isVisIfMobile{
-		display: inline-block;
-		height: 62px;
-		width:30px;
-		padding: 11px 0px;
-		margin:0px;
 	}
 	#content {
 		margin: 0;
