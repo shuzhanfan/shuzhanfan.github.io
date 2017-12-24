@@ -33,3 +33,18 @@
 		{% endunless %}
 	</div>
 </article>
+
+{% capture i %}{{ include.index }}{% endcapture %}
+{% assign replies = site.data.comments[page.slug] | where_exp: 'item', 'item.replying_to == i' %}
+{% for reply in replies %}
+  {% assign index       = forloop.index | prepend: '-' | prepend: include.index %}
+  {% assign r           = reply.replying_to %}
+  {% assign replying_to = r | to_integer %}
+  {% assign avatar      = reply.avatar %}
+  {% assign email       = reply.email %}
+  {% assign name        = reply.name %}
+  {% assign url         = reply.url %}
+  {% assign date        = reply.date %}
+  {% assign message     = reply.message %}
+  {% include comment.html index=index replying_to=replying_to avatar=avatar email=email name=name url=url date=date message=message %}
+{% endfor %}
