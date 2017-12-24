@@ -10,15 +10,16 @@
         <input class="form__field text-field" type="url" name="fields[url]" placeholder="Website (optional)"/>
         <textarea class="form__field text-field" rows="10" name="fields[message]" placeholder="Comment (Markdown is accepted)." required spellcheck="true"></textarea>
 
-        <fieldset class="hidden" style="display:none;">
-          <input type="hidden" name="options[origin]" value="{{ page.url | absolute_url }}">
-          <input type="hidden" id="comment-parent" name="options[parent]" value="">
-          <input type="hidden" id="comment-post-id" name="options[slug]" value="{{ page.slug }}">
-          <label for="comment-form-location">Leave blank if you are a human</label>
-          <input type="text" id="comment-form-location" name="fields[hidden]" autocomplete="off"/>
-          <input type="hidden" name="options[reCaptcha][siteKey]" value="{{ site.reCaptcha.siteKey }}">
-          <input type="hidden" name="options[reCaptcha][secret]" value="{{ site.reCaptcha.secret }}">
-        </fieldset>
+        <div class="form-group hidden" style="display: none;">
+            <input type="hidden" name="options[origin]" value="{{ page.url | relative_url }}">
+            <input type="hidden" name="options[parent]" value="{{ page.url | relative_url }}">
+            <input type="hidden" id="comment-replying-to" name="fields[replying_to]" value="">
+            <input type="hidden" id="comment-post-id" name="options[slug]" value="{{ page.slug }}">
+            <label for="comment-form-location">Leave blank if you are a human</label>
+            <input type="text" id="comment-form-location" name="fields[hidden]" autocomplete="off">
+            <input type="hidden" name="options[reCaptcha][siteKey]" value="{{ site.reCaptcha.siteKey }}">
+            <input type="hidden" name="options[reCaptcha][secret]" value="{{ site.reCaptcha.secret }}">
+        </div>
 
         <!-- Start comment form alert messaging -->
         <p class="hidden js-notice">
