@@ -1,4 +1,4 @@
-![Desk with desktop and laptop computers](/assets/css/images/about.gif)
+![Desk with desktop and laptop computers](https://raw.githubusercontent.com/shuzhanfan/shuzhanfan.github.io/master/assets/images/about.gif)
 
 # [My personal website][]
 This website is built based upon Jekyll framework. The theme used is [facebook.design][]. I also implemented some other useful features
