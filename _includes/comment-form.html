@@ -11,8 +11,8 @@
         <textarea class="form__field text-field" rows="10" name="fields[message]" placeholder="Comment (Markdown is accepted)." required spellcheck="true"></textarea>
 
       <div class="form-group hidden" style="display: none;">
-        <input type="hidden" name="options[origin]" value="{{ page.url | relative_url }}">
-        <input type="hidden" name="options[parent]" value="{{ page.url | relative_url }}">
+        <input type="hidden" name="options[origin]" value="{{ page.url | absoulte_url }}">
+        <input type="hidden" name="options[parent]" value="{{ page.url | absolute_url }}">
         <input type="hidden" id="comment-replying-to" name="fields[replying_to]" value="">
         <input type="hidden" id="comment-post-id" name="options[slug]" value="{{ page.slug }}">
         <label for="comment-form-location">Leave blank if you are a human</label>
