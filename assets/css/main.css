@@ -1680,3 +1680,8 @@ hr {
 	font-style: italic;
 	padding-bottom: 40px;
 }
+
+#nav-initial {
+	font: 400 3.5em/125% 'Qwigley', Helvetica, Sans-serif;
+	color: #333;
+}
