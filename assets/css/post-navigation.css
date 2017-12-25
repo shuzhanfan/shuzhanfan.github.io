@@ -1,0 +1,20 @@
+.PageNavigation {
+  font-size: 14px;
+  display: block;
+  width: auto;
+  overflow: hidden;
+}
+
+.PageNavigation a {
+  display: block;
+  width: 50%;
+  float: left;
+  margin: 0 0;
+  color: rgba(0,0,0,0.8);
+  font-weight: 500;
+  font-style: italic;
+}
+
+.PageNavigation .next {
+  text-align: right;
+}

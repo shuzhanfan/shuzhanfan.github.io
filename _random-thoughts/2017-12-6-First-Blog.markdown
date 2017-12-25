@@ -2,7 +2,7 @@
 layout:         chinese-post
 title:          My first blog
 subtitle:       
-card-image:     /assets/images/hallstat.JPG
+card-image:     /assets/images/cat.gif
 date:           2017-12-06 21:00:00
 tags:           [life]
 post-card-type: image

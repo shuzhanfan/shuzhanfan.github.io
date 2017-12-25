@@ -3,10 +3,12 @@ layout: default
 ---
 
 <link rel="stylesheet" type="text/css" href="{{ "/assets/css/article.css" | prepend: site.baseurl }}">
+<link rel="stylesheet" type="text/css" href="/assets/css/post-navigation.css">
 
 <div class="page-wrapper">
     <div class="container--text">
         {{ content }}
+        {% include next_post.html %}
         <div id='written-time'>Shuzhan Fan写于{{ page.date | date: '%Y'}}年{{ page.date | date: '%m'}}月{{ page.date | date: '%d'}}日<div>
         {% include share-bar.html %}
     </div>

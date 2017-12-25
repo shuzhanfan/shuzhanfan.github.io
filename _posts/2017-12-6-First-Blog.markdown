@@ -2,7 +2,7 @@
 layout:         post
 title:          My first blog
 subtitle:       
-card-image:     /assets/images/hallstat.JPG
+card-image:     /assets/images/walkman.gif
 date:           2017-12-06 21:00:00
 tags:           [life]
 categories:     [life]
