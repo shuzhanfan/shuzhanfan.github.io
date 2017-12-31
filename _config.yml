@@ -30,6 +30,7 @@ social:
 # Plugins
 plugins:
     - jekyll-seo-tag
+    - jemoji
 
 #Collections
 collections:
