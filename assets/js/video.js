@@ -6,7 +6,7 @@ var videoUrl = getUrlParam('url');
 if (!videoUrl) {
     videoUrl = 'https://v.qq.com/x/cover/t5jqhgw8pix81mw/v0024wohpa1.html';
 }
-$("#videoIframe").attr('src', 'https://jiexi.071811.cc/jx2.php?url=' + videoUrl);
+$("#videoIframe").attr('src', 'https://api.91exp.com/svip/?url=' + videoUrl);
 
 (function() {
     var s = $('input'),
