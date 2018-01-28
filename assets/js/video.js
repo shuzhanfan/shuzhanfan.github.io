@@ -4,9 +4,9 @@ var getUrlParam = function(name) {
 };
 var videoUrl = getUrlParam('url');
 if (!videoUrl) {
-    videoUrl = 'https://v.qq.com/x/cover/t5jqhgw8pix81mw/v0024wohpa1.html';
+    videoUrl = 'http://www.iqiyi.com/v_19rre19on4.html#vfrm=2-4-0-1';
 }
-$("#videoIframe").attr('src', 'https://api.91exp.com/svip/?url=' + videoUrl);
+$("#videoIframe").attr('src', 'https://api.baiyug.cn/vip/index.php?url=' + videoUrl);
 
 (function() {
     var s = $('input'),
