@@ -114,10 +114,10 @@ The shown URL is important, we're gonna use this URL to login to the Jupyter Not
 Do not close or exit the first terminal, open another terminal, type the following command:
 
 ```sh
-$ gcloud compute ssh instance-1 --ssh-flag="-L" --ssh-flag="8888:localhost:8888"
+$ gcloud compute ssh instance-1 --ssh-flag="-L 8888:localhost:8888"
 ```
 
-This will also connect to the Compute Engine Linux instance, but with additional parameters.
+This will redirect data from the specified local port, through the secure tunnel to the specified destinatin host and port. 
 
 ### 6. Login to Jupyter Notebook from your local browser
 
