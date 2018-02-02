@@ -6,7 +6,7 @@ var videoUrl = getUrlParam('url');
 if (!videoUrl) {
     videoUrl = 'http://www.iqiyi.com/v_19rre19on4.html#vfrm=2-4-0-1';
 }
-$("#videoIframe").attr('src', 'https://api.baiyug.cn/vip/index.php?url=' + videoUrl);
+$("#videoIframe").attr('src', 'http://api.baiyug.cn/vip/index.php?url=' + videoUrl);
 
 (function() {
     var s = $('input'),
