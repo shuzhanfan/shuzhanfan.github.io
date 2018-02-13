@@ -4,8 +4,8 @@ title:          Machine Learning Model Evaluation Metrics
 subtitle:
 card-image:     /assets/images/manandcat2.gif
 date:           2018-02-13 09:00:00
-tags:           [machine learning]
-categories:     [machine learning]
+tags:           [machine&nbsp;learning]
+categories:     [machine&nbsp;learning]
 post-card-type: image
 ---
 
