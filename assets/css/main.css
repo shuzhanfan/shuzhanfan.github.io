@@ -153,6 +153,29 @@ body #nav {
 #nav div.logo:hover {
 	opacity: .7;
 }
+
+/* Added on 2018-02-15 */
+#nav div.gif {
+	background-image: url('/assets/images/springfestival.gif');
+	background-size: 50px 50px;
+	background-repeat: no-repeat;
+	background-position: left center;
+	color: #e00404;
+	float: left;
+	padding: 0 0 0 42px;
+	padding-left: 70px;
+	margin-left: 30px;
+	margin-top: -5px;
+	font-weight: 500;
+	font-size: 26px;
+	line-height: 75px;
+}
+#nav div.gif:hover {
+	opacity: .7;
+}
+/* Added on 2018-02-15 */
+
+
 .nav-isNotVisIfMobile{
 	display: inline-block;
 }
