@@ -927,6 +927,9 @@ keyframes inf-bounce {
 		text-align: center;
 		width: 80%;
 	}
+	#nav div.gif {
+	display: none;}
+
 }
 
 @media only screen and (max-width: 500px) {
@@ -945,6 +948,10 @@ keyframes inf-bounce {
 	#nav div.nav-isNotVisIfMobile{
 		display: none;
 	} */
+	#nav div.gif {
+		display: none;
+	}
+
 	h2 {
 		margin-top:0;
 		margin-bottom: 12px;
