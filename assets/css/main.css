@@ -1728,11 +1728,3 @@ body .gist .blob-num {
 .wechat-share-logo {
 	display: none;
 }
-
-#happy-new-year {
-	position: fixed;
-	padding: 18px 0 0 70px;
-	color: #d1081c;
-	font-size: 20px;
-	font-weight: 450;
-}
