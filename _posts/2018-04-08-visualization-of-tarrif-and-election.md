@@ -3,7 +3,7 @@ layout:         post
 title:          A data visualization of the impact of tariff spat on midterm election
 subtitle:
 card-image:     /assets/images/wallstreet.jpg
-date:           2018-04-09 09:00:00
+date:           2018-04-09 18:00:00
 tags:           [life, data&nbsp;mining]
 categories:     [politics, python, data&nbsp;mining]
 post-card-type: image
