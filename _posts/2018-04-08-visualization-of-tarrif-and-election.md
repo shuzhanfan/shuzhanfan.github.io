@@ -36,7 +36,7 @@ import branca.colormap as cm
 
 ### Read data files
 
-Quite a bunch of data files are needed. And it took time to find the correct data. I already put all the data in my [<u>Github repository</u>](). Feel free to download them. The 2016 soybeans production by county data was acquired from the [<u>USDA</u>](https://www.nass.usda.gov/index.php) (United States Department of Agriculture) website. The 2016 county level presidential eleciton results was obtained from a [<u>Github repo</u>](https://github.com/tonmcg/County_Level_Election_Results_12-16). The US senate an US house members data were from another [<u>Github repo</u>](https://github.com/CivilServiceUSA/us-senate).
+Quite a bunch of data files are needed. And it took time to find the correct data. I already put all the data in my [<u>Github repository</u>](https://github.com/shuzhanfan/map_vis_soybeans_elction). Feel free to download them. The 2016 soybeans production by county data was acquired from the [<u>USDA</u>](https://www.nass.usda.gov/index.php) (United States Department of Agriculture) website. The 2016 county level presidential eleciton results was obtained from a [<u>Github repo</u>](https://github.com/tonmcg/County_Level_Election_Results_12-16). The US senate an US house members data were from another [<u>Github repo</u>](https://github.com/CivilServiceUSA/us-senate).
 
 
 ```python
