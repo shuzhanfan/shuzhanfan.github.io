@@ -57,4 +57,4 @@ Then, we could get:
 
 **_F1 score_** = 2x0.83x0.625/(0.83+0.625) = 0.71
 
-As for which one/ones you should use and what constitutes good metrics, it really depends on the specific problem you are dealing with.
+As for which one/ones you should use and what constitutes good metrics, it really depends on the specific problem you are dealing with. When the distribution of the classes in data is well balanced, accuracy can give you a good picture of how the model is performing. But when you have skewed data, for example, one of the class is dominant in your data set, then accuracy might not be enough to evaluate your model. Let's say you have a dataset which contains 80% positive class, and 20% negative class. This means that by predicting every data into the positive class, the model will get 80% accuracy. In this case, you might want to explore further into the confusion matrix and try different evaluation metrics. 
