@@ -13,6 +13,8 @@ After training the machine learning model, we should always evaluate the model t
 
 One common headache newcomers to machine learning have is to differentiate the nuances among the distinct evaluation metrics. I came across the same issue when I was in my first machine learning class. Back to that time, I searched extensively online and read a bunch of articles trying to figure out which one is which. And I found that the most efficient way to untangle this and fully understand the concepts is to use a contingency table, or called a confusion matrix.
 
+Note: For the ease of demonstration and explanation, below I will talk in case of binary classification, in which the target variable only has two classes to be predicted.
+
 ### Confusion matrix
 
 Wikipedia provides an excellent [<u>confusion matrix</u>](https://en.wikipedia.org/wiki/Confusion_matrix) illustrating all the formulas for all the metrics. While helpful, I found this confusion matrix kind of tedious since I won't use all of the metrics and I only care about a few of them. So I decided to make a simplified version out of that confusion matrix, just showing the formulas for the four most commonly used metrics. Also, I'll show you a real example on how to calculate them and how they differ in practice.
