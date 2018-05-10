@@ -12,7 +12,7 @@ mathjax:        ture
 
 Support Vector Machine (SVM) is one of the most powerful out-of-the-box supervised machine learning algorithms. Unlike many other machine learning algorithms such as neural networks, you don't have to do a lot of tweaks to obtain good results with SVM. I spent quite a time reading articles, blogs, and online materials trying to get the gist of this performant algorithm and found that most of the tutorials out online are explaining SVM from a big overview, while treating the underlying mathematical background as a block box. I often still felt confused after I finished reading the whole article. What exactly is the problem SVM is trying to solve? How do we get the optimal hyperplane? How does SVM handle non-linearly separable data? Why use kernels? To fully understand the answers to these questions, we need to go under the hood and explore the mathematics behind SVMs and understand how they work.
 
-In this series of blog posts, I will focus on the underlying mathematical part of SVMs and this requires that you have at least some background in linear algebra and optimization theory.
+In this blog post, I will focus on the underlying mathematical part of SVMs and this requires that you have at least some background in linear algebra and optimization theory.
 
 ## Definitions
 
@@ -20,7 +20,7 @@ Before we get into the SVM algorithm, let's first talk about some definitions we
 
 ### Length of a vector
 
-The length of a vector **x** is called its norm, which is written as \|\|**x**\|\|. The Euclidean norm formula to calculate the norm of a vector **x** = $$x_1, x_2, ..., x_n$$ is:
+The length of a vector **x** is called its norm, which is written as \|\|**x**\|\|. The Euclidean norm formula to calculate the norm of a vector **x** = ($$x_1, x_2, ..., x_n$$) is:
 {% raw %}
 $$
     ||x|| = \sqrt{x_1^2+x_2^2+...+x_n^2}
@@ -130,7 +130,7 @@ $$
 $$
 {% endraw %}
 
-The point above or on the hyperplane will be classified as class +1, and the class below the hyperplane will be classified as class -1.
+The point above or on the hyperplane will be classified as class +1, and the point below the hyperplane will be classified as class -1.
 
 So basically, the goal of the SVM learning algorithm is to find a hyperplane which could separate the data accurately. There might be many such hyperplanes. And we need to find the best one, which is often referred as the optimal hyperplane.
 
@@ -212,7 +212,7 @@ $$
 $$
 {% endraw %}
 
-If we rescale **w** and b, we are still maximizing M and optimization result will not change. Let's rescale **w** and b and make **F=1**, the above problem can be rewritten as:
+If we rescale **w** and b, we are still maximizing M and the optimization result will not change. Let's rescale **w** and b and make **F=1**, the above problem can be rewritten as:
 {% raw %}
 $$
     \max_{w,b} \frac{1}{||w||} \\
@@ -288,7 +288,7 @@ $$
 $$
 {% endraw %}
 
-From above two equations, we get $$w=\sum_{i=1}^{m}{\alpha_iy_ix_i}$$ and $$\sum_{i=1}^{m}{\alpha_iy_i}=0$$. We substitute them into the Lagrangian function $$\mathcal{L}$$ and get:
+From the above two equations, we get $$w=\sum_{i=1}^{m}{\alpha_iy_ix_i}$$ and $$\sum_{i=1}^{m}{\alpha_iy_i}=0$$. We substitute them into the Lagrangian function $$\mathcal{L}$$ and get:
 {% raw %}
 $$
     W(\alpha,b)= \sum_{i=1}^m\alpha_i -\frac{1}{2}\sum_{i=1}^m\sum_{j=1}^m\alpha_i\alpha_jy_iy_jx_i\cdot x_j
@@ -312,7 +312,7 @@ $$
 $$
 {% endraw %}
 
-$$x^\star$$ are the point/points where we reach the optimal. The $$\alpha$$ value is positive for these points. So $$y_i(w\cdot x^\star + b)-1$$ must be zero. These examples are called support vectors, which are the closest points to the hyperplane.
+$$x^\star$$ are the point/points where we reach the optimal. The $$\alpha$$ value is positive for these points. And the $$\alpha$$ value of other points are close to zero. So $$y_i(w\cdot x^\star + b)-1$$ must be zero. These examples are called support vectors, which are the closest points to the hyperplane.
 
 ### Compute **w** and b
 
@@ -339,7 +339,7 @@ $$
 $$
 {% endraw %}
 
-We multiply both sides by $$y_i$$ adn we know $$y_i^2=1$$. We get:
+We multiply both sides by $$y_i$$ and we know $$y_i^2=1$$. We get:
 {% raw %}
 $$
     b = y_i - w\cdot x^\star
@@ -372,11 +372,13 @@ $$
 
 We can solve the Wolfe dual problem using some package or library analytically. For example, we can use a Python package called CVXOPT, which is for convex optimization. This package provides a QP solver for quadratic programming problems. We can rearrange our dual problem, state the required parameters, feed them to the QP solver, and get expected solution. The solution will contain the values of Lagrange multipliers for each example. We can then compute **w** and b and get the optimal hyperplane. I will not list the code here cause it is out of the scope of this article, but you are free to implement it on your own, which should not be very difficult.
 
+In practice, most machine learning libraries use an algorithm specifically created to solve this problem quickly: the SMO (sequential minimal optimization) algorithm. Compared to CVXOPT QP solver, SMO tries to solve a simpler problem and works quite faster. I will not state the details of SMO, but you can find more materials online and learn more about it.
+
 Different from the Perceptrons, running SVM multiple times will always return the same result.
 
 ### Hard Margin SVM
 
-The above SVM formulation is called Hard Margin SVM. The problem with Hard Margin SVM is that it does not tolerate outliers. It does not work with non-linearly separable data because of outliers. The reason is that if you remember our initial optimization problem the constraints are $$y_i(w\cdot x+b) \ge 0$$ for each example, for the optimization problem to be solvable, all the constraints have to satisfied. If there is an outlier example which makes the constraint not satisfied, then the optimization will not be solvable. In the next section we'll talk about how to deal with this limitation using a variant called Soft Margin SVM.
+The above SVM formulation is called Hard Margin SVM. The problem with Hard Margin SVM is that it does not tolerate outliers. It does not work with non-linearly separable data because of outliers. The reason is that if you remember our initial optimization problem the constraints are $$y_i(w\cdot x_i+b) \ge 0$$ for each example. For the optimization problem to be solvable, all the constraints have to satisfied. If there is an outlier example which makes the constraint not satisfied, then the optimization will not be solvable. In the next section we'll talk about how to deal with this limitation using a variant called Soft Margin SVM.
 
 ## Solving SVM optimization problem -- Soft Margin SVM
 
@@ -399,7 +401,7 @@ $$
 $$
 {% endraw %}
 
-Also, we want to make sure that we do not minimize the objective function by choose negative values of $$\zeta$$. We add the constraints $$\zeta_i \ge 0$$. We also add a regularization parameter C to determine how important $$\zeta$$ should be, which means how much we want to avoid misclassifying each training example. The regularized optimization problem becomes:
+Also, we want to make sure that we do not minimize the objective function by choosing negative values of $$\zeta$$. We add the constraints $$\zeta_i \ge 0$$. We also add a regularization parameter C to determine how important $$\zeta$$ should be, which means how much we want to avoid misclassifying each training example. The regularized optimization problem becomes:
 {% raw %}
 $$
     \min_{w,b,\zeta} \frac{1}{2}||w||^2+C\sum_{i=1}^{m}\zeta_i \\
@@ -419,7 +421,7 @@ Here the constraint $$\alpha_i \ge 0$$ has been changed to $$0\le \alpha_i \le C
 
 ### Regularization parameter C
 
-So, what does the regularization parameter C does? As we said, it determines how important $$\zeta$$ should be. A smaller C emphasizes the importance of $$\zeta$$ and a larger C diminishes the importance of $$\zeta$$.
+So, what does the regularization parameter C do? As we said, it determines how important $$\zeta$$ should be. A smaller C emphasizes the importance of $$\zeta$$ and a larger C diminishes the importance of $$\zeta$$.
 
 Another way of thinking of C is it gives you control of how the SVM will handle errors. If we set C to positive infinite, we will get the same result as the Hard Margin SVM. On the contrary, if we set C to 0, there will be no constraint anymore, and we will end up with a hyperplane not classifying anything. The rules of thumb are: small values of C will result in a wider margin, at the cost of some misclassifications; large values of C will give you the Hard Margin classifier and tolerates zero constraint violation. We need to find a value of C which will not make the solution be impacted by the noisy data.
 
@@ -427,7 +429,7 @@ Another way of thinking of C is it gives you control of how the SVM will handle 
 
 Now, the Soft Margin SVM can handle the non-linearly separable data caused by noisy data. What if the non-linear separability is not caused by the noise? What if the data are characteristically non-linearly separable? Can we still separate the data using SVM? The answer is of course Yes. And we'll talk about a technique called kernel trick to deal with this.
 
-Image you have a two-dimensional non-linearly separable dataset, you would like to classify it using SVM. It looks like not possible because the data is not linearly separable. However, if we transform the two-dimensional data to a higher dimension, for example, three-dimension or even ten-dimension, we would be able to find a hyperplane to separate the data.
+Image you have a two-dimensional non-linearly separable dataset, you would like to classify it using SVM. It looks like not possible because the data is not linearly separable. However, if we transform the two-dimensional data to a higher dimension, say, three-dimension or even ten-dimension, we would be able to find a hyperplane to separate the data.
 
 The problem is, if we have a large dataset containing, say, millions of examples, the transformation will take a long time to run, let alone the calculations in the later optimization problem. Let's revisit the Wolfe dual problem:
 {% raw %}
@@ -479,8 +481,8 @@ $$
 
 The RBF (Radial Basis Function) kernel is also called the Gaussian kernel. It will result in a more complex decision boundary. The RBF kernel contains a parameter $$\gamma$$. A small value of $$\gamma$$ will make the model behave like a linear SVM. A large value of $$\gamma$$ will make the model heavily impacted by the support vectors examples.
 
-In practice, it is recommended to try RBF kernel first cause it it normally performs well.
+In practice, it is recommended to try RBF kernel first cause it normally performs well.
 
 ## Conclusion
 
-If you are getting this far, congratulations! I hope this is not a too long article for you to read and a too arcane explanation for you to understand the gist of SVM. Sometimes layman's approach is not really a good one, especially for experienced readers or researchers who want to master the underlying logic of an algorithm. Then you have to, I hate but I gotta say, dive into hard math and understand the formulas.
+If you are getting this far, congratulations! I hope this is not a too long article for you to read and a too arcane explanation for you to understand the gist of SVM. Sometimes layman's approach is not always a good one, especially for experienced readers or researchers who want to master the underlying logic of an algorithm. Then you have to, I hate but I gotta say, dive into the hard math and understand the formulas.
