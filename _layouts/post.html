@@ -4,6 +4,10 @@ layout: default
 
 <link rel="stylesheet" type="text/css" href="{{ "/assets/css/article.css" | prepend: site.baseurl }}">
 
+{% if page.mathjax %}
+    {% include mathjax_support %}
+{% endif %}
+
 <div class="page-wrapper">
     <div class="container--text">
         {{ content }}
