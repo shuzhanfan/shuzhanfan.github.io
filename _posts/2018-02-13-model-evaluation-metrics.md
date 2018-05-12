@@ -1,6 +1,6 @@
 ---
 layout:         post
-title:          Machine Learning Model Evaluation Metrics
+title:          Machine Learning Classification Model Evaluation Metrics
 subtitle:
 card-image:     /assets/images/manandcat2.gif
 date:           2018-02-13 09:00:00
@@ -9,7 +9,7 @@ categories:     [machine&nbsp;learning]
 post-card-type: image
 ---
 
-After training the machine learning model, we should always evaluate the model to determine if it does a good job of predicting the target value on new unseen data. Among the various metrics that could be used to evaluate the predictive power of a machine learning model (especially for classification models), several most commonly used ones are: accuracy, precision, recall, and F1 score.
+After training the machine learning classification model, we should always evaluate the model to determine if it does a good job of predicting the target value on new unseen data. Among the various metrics that could be used to evaluate the predictive power of a machine learning classification model, several most commonly used ones are: accuracy, precision, recall, F1 score, and AUC.
 
 One common headache newcomers to machine learning have is to differentiate the nuances among the distinct evaluation metrics. I came across the same issue when I was in my first machine learning class. Back to that time, I searched extensively online and read a bunch of articles trying to figure out which one is which. And I found that the most efficient way to untangle this and fully understand the concepts is to use a contingency table, or called a confusion matrix.
 
@@ -33,7 +33,7 @@ Take a look at the following image. If a doctor predicts a man is pregnant which
 
 ### Accuracy, precision, recall, F1 score
 
-Now, let's get into the discussion of the four model evaluation metrics. First, the definitions:
+Now, let's get into the discussion of the first four model evaluation metrics. First, the definitions:
 
 **_Accuracy_**: the ratio of correctly predicted observations to total observations.
 
@@ -56,6 +56,38 @@ Then, we could get:
 **_Recall_** = 25/40 = 0.625
 
 **_F1 score_** = 2x0.83x0.625/(0.83+0.625) = 0.71
+
+### ROC curve
+
+Another commonly used evaluation metric for binary classification is called Area Under Curve (AUC). Normally the curve refers to the Receiver Operating Characteristic (ROC) curve. ROC curve plots the False Positive rate (1-specificity) versus the True Positive rate (sensitivity) for each possible threshold value used.
+
+ROC is composed of sensitivity and specificity:
+
+_**Sensitivity**_ is actually *recall*. It is the ratio of correctly predicted positive observations to the total actual positive observations.
+
+_**specificity**_ is the ratio of correctly predicted negative observations to the total actual positive observations.
+
+So how is ROC plotted exactly? Let's look at an example.
+
+Again, assume your classification model is to predict whether or not an image contains a cat. Your testing set contains 100 images. And 70 images actually contain a cat, 30 images do not.
+
+If you select a cut-off point such that the model classifies 0 images as cat, 100 as not cat. Then we could get: _sensitivity_ = 0/70 = 0, (1-_specificity_) = 1 - 30/30 = 0. The curve will pass the point (0, 0).
+
+If you select another cut-off point such that the model classifies 40 images as cat, 60 as not cat. Of the 40 positive predicted images, 35 of them actually contain a cat. Of the 60 negative predicted images, 35 of them contain a cat. Then we could get: _sensitivity_ = 35/70 = 0.50, (1-_specificity_) = 1 - 25/30 = 0.16. The curve will pass the point (0.16, 0.50).
+
+If you select another cut-off point such that the model classifies 60 images as cat, 40 as not cat. Of the 60 positive predicted images, 50 of them actually contain a cat. Of the 40 negative predicted images, 20 of them contain a cat. Then we could get: _sensitivity_ = 50/70 = 0.71, (1-_specificity_) = 1 - 20/30 = 0.33. The curve will pass the point (0.33, 0.71).
+
+If you select another cut-off point such that the model classifies 80 images as cat, 20 as not cat. Of the 80 positive predicted images, 60 of them actually contain a cat. Of the 20 negative predicted images, 10 of them contain a cat. Then we could get: _sensitivity_ = 60/70 = 0.86, (1-_specificity_) = 1 - 10/30 = 0.67. The curve will pass the point (0.67, 0.86).
+
+If you select another cut-off point such that the model classifies all 100 images as cat, 0 as not cat. Then we could get: _sensitivity_ = 70/70 = 1, (1-_specificity_) = 1 - 0/30 = 1. The curve will pass the point (1, 1).
+
+These are just a few toy points you could possibly get. If you keep selecting different cut-off points and you'll end up with different sensitivity and specificity values and hence different points on the ROC curve. If you plot the curve, you would get something look like the following. The blue line is the ROC curve.
+
+![roc curve](/assets/images/roc.jpg)
+
+For a perfect model that correctly classifies every instance, the ROC curve will pass through the upper left corner. The closer the curve comes to the upper left corner, the better the classification performance. The closer the curve comes to the 45-degree diagonal, the worse the classification performance.
+
+The area under the curve (AUC) is an evaluation metric that can be obtained from the ROC curve. If the classifier is perfect at predicting, the AUC will be close to 0. If the classifier is no better than random guessing, the AUC will be around 0.5.
 
 ### Conclusion
 
