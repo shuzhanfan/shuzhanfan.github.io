@@ -81,9 +81,7 @@ If you select another cut-off point such that the model classifies 80 images as 
 
 If you select another cut-off point such that the model classifies all 100 images as cat, 0 as not cat. Then we could get: _sensitivity_ = 70/70 = 1, (1-_specificity_) = 1 - 0/30 = 1. The curve will pass the point (1, 1).
 
-These are just a few toy points you could possibly get. If you keep selecting different cut-off points and you'll end up with different sensitivity and specificity values and hence different points on the ROC curve. If you plot the curve, you would get something look like the following. The blue line is the ROC curve.
-
-![roc curve](/assets/images/roc.jpg)
+These are just a few toy points you could possibly get. If you keep selecting different cut-off points and you'll end up with different sensitivity and specificity values and hence different points on the ROC curve.
 
 For a perfect model that correctly classifies every instance, the ROC curve will pass through the upper left corner. The closer the curve comes to the upper left corner, the better the classification performance. The closer the curve comes to the 45-degree diagonal, the worse the classification performance.
 
