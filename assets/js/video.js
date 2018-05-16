@@ -6,7 +6,9 @@ var videoUrl = getUrlParam('url');
 if (!videoUrl) {
     videoUrl = 'http://www.iqiyi.com/v_19rre19on4.html#vfrm=2-4-0-1';
 }
-$("#videoIframe").attr('src', 'http://api.baiyug.cn/vip/index.php?url=' + videoUrl);
+
+// $("#videoIframe").attr('src', 'http://17kyun.com/api.php?url=' + videoUrl);
+$("#videoIframe").attr('src', 'https://api.pangujiexi.com/player.php?url=' + videoUrl);
 
 (function() {
     var s = $('input'),
@@ -37,7 +39,7 @@ $("#videoIframe").attr('src', 'http://api.baiyug.cn/vip/index.php?url=' + videoU
         var videoUrl = document.getElementById('videoSearchInput').value;
         f.addClass('explode');
         setTimeout(function(){
-            $("#videoIframe").attr('src', 'https://jiexi.071811.cc/jx2.php?url=' + videoUrl);
+            $("#videoIframe").attr('src', 'http://17kyun.com/api.php?url=' + videoUrl);
             history.pushState('', '', '?url=' + videoUrl);
             s.val('');
             f.removeClass('explode');
