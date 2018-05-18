@@ -4,8 +4,8 @@ title:          Landsat 8 data access from Google Cloud Storage
 subtitle:
 card-image:     /assets/images/earth.jpg
 date:           2018-05-18 15:00:00
-tags:           [remote&nbsp;sensing]
-categories:     [remote&nbsp;sensing]
+tags:           [remote&nbsp;sensing, cloud]
+categories:     [remote&nbsp;sensing, google&nbsp;cloud]
 post-card-type: image
 ---
 
