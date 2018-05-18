@@ -168,18 +168,19 @@ pre {
     word-wrap: normal; }
 
 table {
-  color: #333333;
-  font-size: .9em;
+  color: rgba(0,0,0,1.0);
+  font-size: 1.0em;
   text-align: center;
   line-height: 40px;
   border-spacing: 0;
-  border: 2px solid #92121e;
+  border: 1px solid #c9e1f6;
   width: 90%;
   margin: 50px auto; }
 
 thead tr:first-child {
-  background-color: #92121e;
-  color: #F8F8F8;
+  background-color: #e8f2fb;
+  color: rgba(0,0,0,0.7);
+  opacity: 1;
   border: none; }
 
 th {
