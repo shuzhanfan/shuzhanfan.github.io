@@ -115,7 +115,7 @@ $$
 $$
 {% endraw %}
 
-This equation is derived from two-dimensional vectors. But in fact, it also works works for any number of dimensions. This is the equation of the hyperplane.
+This equation is derived from two-dimensional vectors. But in fact, it also works for any number of dimensions. This is the equation of the hyperplane.
 
 ### Classifier
 
@@ -144,7 +144,7 @@ The question then comes up as how do we choose the optimal hyperplane and how do
 
 #### First version
 
-Let's first consider the equation of the hyperplane $$w\cdot x + b=0$$. We know that if the point (**x**,y) is on the hyperplane, $$w\cdot x + b=0$$. If the point (**x**,y) is not on the hyperplane, the value of $$w\cdot x + b$$ could be positive or negative. For all the training example points, we want to know the point which is cloest to the hyperplane. We could calculate $$\beta=\|w\cdot x + b\|$$. To formally define the problem:
+Let's first consider the equation of the hyperplane $$w\cdot x + b=0$$. We know that if the point (**x**,y) is on the hyperplane, $$w\cdot x + b=0$$. If the point (**x**,y) is not on the hyperplane, the value of $$w\cdot x + b$$ could be positive or negative. For all the training example points, we want to know the point which is closest to the hyperplane. We could calculate $$\beta=\|w\cdot x + b\|$$. To formally define the problem:
 
 Given a dataset $$D=\{(x_i,y_i)\|x_i\in R^n, y_i\in \{-1,1\}\}_{i=1}^{m}$$, we compute $$\beta$$ for each training example, and B is the smallest $$\beta$$ we get.
 {% raw %}
@@ -160,7 +160,7 @@ $$
 $$
 {% endraw %}
 
-The problem with this metric is that it could fail to distinguish between a good hyperplane and a bad one. Because we take the absolute value of $$w\cdot x + b$$, we could get the same value for a correct and incorrect hyperplane. We need to adjust this metric.
+The problem with this metric is that it could fail to distinguish between a good hyperplane and a bad one. Because we take the absolute value of $$w\cdot x + b$$, we could get the same value for a correct and an incorrect hyperplane. We need to adjust this metric.
 
 #### Second version
 
@@ -378,7 +378,7 @@ Different from the Perceptrons, running SVM multiple times will always return th
 
 ### Hard Margin SVM
 
-The above SVM formulation is called Hard Margin SVM. The problem with Hard Margin SVM is that it does not tolerate outliers. It does not work with non-linearly separable data because of outliers. The reason is that if you remember our initial optimization problem the constraints are $$y_i(w\cdot x_i+b) \ge 0$$ for each example. For the optimization problem to be solvable, all the constraints have to satisfied. If there is an outlier example which makes the constraint not satisfied, then the optimization will not be solvable. In the next section we'll talk about how to deal with this limitation using a variant called Soft Margin SVM.
+The above SVM formulation is called Hard Margin SVM. The problem with Hard Margin SVM is that it does not tolerate outliers. It does not work with non-linearly separable data because of outliers. The reason is that if you remember our initial optimization problem the constraints are $$y_i(w\cdot x_i+b) \ge 1$$ for each example. For the optimization problem to be solvable, all the constraints have to satisfied. If there is an outlier example which makes the constraint not satisfied, then the optimization will not be solvable. In the next section we'll talk about how to deal with this limitation using a variant called Soft Margin SVM.
 
 ## Solving SVM optimization problem -- Soft Margin SVM
 
