@@ -37,6 +37,9 @@ collections:
     random-thoughts:
         output: true
         permalink: /:collection/:year/:month/:title/
+    machine-learning:
+        output: true
+        permalink: /:collection/:year/:month/:title/
 
 # Staticman comments (full configuration in staticman.yml)
 staticman:
