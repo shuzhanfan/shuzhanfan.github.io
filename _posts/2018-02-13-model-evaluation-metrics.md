@@ -41,7 +41,7 @@ Now, let's get into the discussion of the first four model evaluation metrics. F
 
 **_Recall_**: the ratio of correctly predicted positive observations to the total actual positive observations.
 
-**_F1 score_**: the weighted average of precision of recall.
+**_F1 score_**: the weighted average of precision and recall.
 
 Don't worry if you still feel lost reading these definitions. Let me give you a practical example to clarify their calculations. Assume your classification model is to predict whether or not an image contains a cat. Your testing set contains 100 images. And 40 images actually contain a cat, 60 images do not. The machine learning model identifies (predicts) 30 images as the ones which contain a cat, and other 70 as the ones do not. Of the 30 images identified as positive, 25 images actually contain a cat. Of the 70 images identified as negative, 15 images actually contain a cat.
 
@@ -65,27 +65,27 @@ ROC is composed of sensitivity and specificity:
 
 _**Sensitivity**_ is actually *recall*. It is the ratio of correctly predicted positive observations to the total actual positive observations.
 
-_**specificity**_ is the ratio of correctly predicted negative observations to the total actual positive observations.
+_**specificity**_ is the ratio of correctly predicted negative observations to the total actual negative observations.
 
 So how is ROC plotted exactly? Let's look at an example.
 
 Again, assume your classification model is to predict whether or not an image contains a cat. Your testing set contains 100 images. And 70 images actually contain a cat, 30 images do not.
 
-If you select a cut-off point such that the model classifies 0 images as cat, 100 as not cat. Then we could get: _sensitivity_ = 0/70 = 0, (1-_specificity_) = 1 - 30/30 = 0. The curve will pass the point (0, 0).
+If you select a cut-off point such that the model classifies 0 images as cat, 100 as not cat. Then we could get: _sensitivity_ = 0/70 = 0, (1-*specificity*) = 1 - 30/30 = 0. The curve will pass the point (0, 0).
 
-If you select another cut-off point such that the model classifies 40 images as cat, 60 as not cat. Of the 40 positive predicted images, 35 of them actually contain a cat. Of the 60 negative predicted images, 35 of them contain a cat. Then we could get: _sensitivity_ = 35/70 = 0.50, (1-_specificity_) = 1 - 25/30 = 0.16. The curve will pass the point (0.16, 0.50).
+If you select another cut-off point such that the model classifies 40 images as cat, 60 as not cat. Of the 40 positive predicted images, 35 of them actually contain a cat. Of the 60 negative predicted images, 35 of them contain a cat. Then we could get: *sensitivity* = 35/70 = 0.50, (1-*specificity*) = 1 - 25/30 = 0.16. The curve will pass the point (0.16, 0.50).
 
-If you select another cut-off point such that the model classifies 60 images as cat, 40 as not cat. Of the 60 positive predicted images, 50 of them actually contain a cat. Of the 40 negative predicted images, 20 of them contain a cat. Then we could get: _sensitivity_ = 50/70 = 0.71, (1-_specificity_) = 1 - 20/30 = 0.33. The curve will pass the point (0.33, 0.71).
+If you select another cut-off point such that the model classifies 60 images as cat, 40 as not cat. Of the 60 positive predicted images, 50 of them actually contain a cat. Of the 40 negative predicted images, 20 of them contain a cat. Then we could get: *sensitivity* = 50/70 = 0.71, (1-*specificity*) = 1 - 20/30 = 0.33. The curve will pass the point (0.33, 0.71).
 
-If you select another cut-off point such that the model classifies 80 images as cat, 20 as not cat. Of the 80 positive predicted images, 60 of them actually contain a cat. Of the 20 negative predicted images, 10 of them contain a cat. Then we could get: _sensitivity_ = 60/70 = 0.86, (1-_specificity_) = 1 - 10/30 = 0.67. The curve will pass the point (0.67, 0.86).
+If you select another cut-off point such that the model classifies 80 images as cat, 20 as not cat. Of the 80 positive predicted images, 60 of them actually contain a cat. Of the 20 negative predicted images, 10 of them contain a cat. Then we could get: *sensitivity* = 60/70 = 0.86, (1-*specificity*) = 1 - 10/30 = 0.67. The curve will pass the point (0.67, 0.86).
 
-If you select another cut-off point such that the model classifies all 100 images as cat, 0 as not cat. Then we could get: _sensitivity_ = 70/70 = 1, (1-_specificity_) = 1 - 0/30 = 1. The curve will pass the point (1, 1).
+If you select another cut-off point such that the model classifies all 100 images as cat, 0 as not cat. Then we could get: *sensitivity* = 70/70 = 1, (1-*specificity*) = 1 - 0/30 = 1. The curve will pass the point (1, 1).
 
 These are just a few toy points you could possibly get. If you keep selecting different cut-off points and you'll end up with different sensitivity and specificity values and hence different points on the ROC curve.
 
 For a perfect model that correctly classifies every instance, the ROC curve will pass through the upper left corner. The closer the curve comes to the upper left corner, the better the classification performance. The closer the curve comes to the 45-degree diagonal, the worse the classification performance.
 
-The area under the curve (AUC) is an evaluation metric that can be obtained from the ROC curve. If the classifier is perfect at predicting, the AUC will be close to 0. If the classifier is no better than random guessing, the AUC will be around 0.5.
+The area under the curve (AUC) is an evaluation metric that can be obtained from the ROC curve. If the classifier is perfect at predicting, the AUC will be close to 1. If the classifier is no better than random guessing, the AUC will be around 0.5.
 
 ### Conclusion
 
