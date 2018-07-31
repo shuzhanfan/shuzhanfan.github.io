@@ -214,34 +214,39 @@ body #nav {
 
 /* Buttons
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-
-.button{
-    height: 58px;
-    font-size: 18px;
-    line-height: 26px;
-    padding: 0 24px;
-    border-radius: 4px;
-    border-style: none;
-    margin: 40px 5px 10px 5px;
-    display: inline-block;
+.button {
+	border:none;
+    height: 45px;
+    width: 45px;
+    line-height: 35px;
+    border-radius:50%;
+    background-color: transparent;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
     position: relative;
-    text-decoration: none;
-    white-space: nowrap;
-    cursor: pointer;
+    overflow: hidden;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    z-index: 1;
+    margin: 0 8px 0 0;
     -webkit-transition: all 250ms cubic-bezier(.02, .01, .47, 1);
+	-webkit-appearance: none;
     -moz-transition: all 250ms cubic-bezier(.02, .01, .47, 1);
     transition: all 250ms cubic-bezier(.02, .01, .47, 1);
 }
 
 .button--active{
-    background-color: #4080FF;
-    color:white;
+    background-color: transparent;
+    color:black;
 }
 
 .button--active:hover{
-    background-color: #FFFFFF;
-    color: #4080FF;
-    box-shadow: 0 6px 20px rgba(0,0,0,.08)
+	background-color: #404040;
+	border: 2px solid #ddd;
+	border-radius: 50%;
+	color: #fff;
+	border:none;
 }
 
 /* Cards

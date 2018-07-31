@@ -20,7 +20,7 @@ redcarpet:
 # Pagination
 gems: [jekyll-paginate]
 paginate: 10
-paginate_path: "pages/:num/"
+paginate_path: "/page:num/"
 
 # Social
 social:
