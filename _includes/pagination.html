@@ -1,25 +1,25 @@
 {% if paginator.total_pages > 1 %}
 <div class="container--call-to-action" style="text-align: center; margin: 0px 0 30px 0;">
   {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}"><button class="button button--active button--header">&laquo;</button></a>
+    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}"><button class="button button--active">&laquo;</button></a>
   {% else %}
-    <span><button class="button button--active button--header">&laquo;</button></span>
+    <span><button class="button button--active">&laquo;</button></span>
   {% endif %}
 
   {% for page in (1..paginator.total_pages) %}
     {% if page == paginator.page %}
-      <em><button class="button button--active button--header">{{ page }}</button></em>
+      <em><button class="button button--active page-num">{{ page }}</button></em>
     {% elsif page == 1 %}
-      <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}"><button class="button button--active button--header">{{ page }}</button></a>
+      <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}"><button class="button button--active">{{ page }}</button></a>
     {% else %}
-      <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}"><button class="button button--active button--header">{{ page }}</button></a>
+      <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}"><button class="button button--active">{{ page }}</button></a>
     {% endif %}
   {% endfor %}
 
   {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}"><button class="button button--active button--header">&raquo;</button></a>
+    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}"><button class="button button--active">&raquo;</button></a>
   {% else %}
-    <span><button class="button button--active button--header">&raquo;</button></span>
+    <span><button class="button button--active">&raquo;</button></span>
   {% endif %}
 </div>
 {% endif %}

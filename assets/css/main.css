@@ -242,12 +242,21 @@ body #nav {
 }
 
 .button--active:hover{
+	background-color: #a6a6a6;
+	border: 2px solid #ddd;
+	border-radius: 50%;
+	color: #fff;
+	border:none;
+}
+
+.page-num:first-child {
 	background-color: #404040;
 	border: 2px solid #ddd;
 	border-radius: 50%;
 	color: #fff;
 	border:none;
 }
+
 
 /* Cards
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
