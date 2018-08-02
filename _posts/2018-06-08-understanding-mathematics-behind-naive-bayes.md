@@ -5,7 +5,7 @@ subtitle:
 card-image:     /assets/images/mancancat5.gif
 date:           2018-06-08 21:00:00
 tags:           [machine&nbsp;learning]
-categories:     [machine&nbsp;learning]
+categories:     [machine&nbsp;learning, algorithms]
 post-card-type: image
 mathjax:        true
 ---

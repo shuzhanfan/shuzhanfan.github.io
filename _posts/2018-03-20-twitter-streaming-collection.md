@@ -4,8 +4,8 @@ title:          Geo-tagged tweets collection using Twitter Streaming API and dat
 subtitle:
 card-image:     /assets/images/twitter.gif
 date:           2018-03-20 15:00:00
-tags:           [database, data&nbsp;mining, nlp, python]
-categories:     [database, data&nbsp;mining, natural&nbsp;language&nbsp;processing, python]
+tags:           [big&nbsp;data, nlp, python]
+categories:     [database, data&nbsp;mining, nlp, python]
 post-card-type: image
 ---
 
