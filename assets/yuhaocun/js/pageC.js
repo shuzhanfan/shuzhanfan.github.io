@@ -1,8 +1,8 @@
 // 音乐设置
 var audioConfig = {
 	enable: true, // 是否开启音乐
-	playURL: 'music/happy.wav',
-	cycleURL: 'music/circulation.wav'
+	playURL: '/assets/yuhaocun/music/happy.wav',
+	cycleURL: '/assets/yuhaocun/music/circulation.wav'
 };
 
 /////////
@@ -38,19 +38,19 @@ var logo = {
 
 // 获取雪花图片
 var snowflakeURL = [
-	'images/snowflake/snowflake1.png',
-	'images/snowflake/snowflake2.png',
-	'images/snowflake/snowflake3.png',
-	'images/snowflake/snowflake4.png',
-	'images/snowflake/snowflake5.png',
-	'images/snowflake/snowflake6.png'
+	'/assets/yuhaocun/images/snowflake/snowflake1.png',
+	'/assets/yuhaocun/images/snowflake/snowflake2.png',
+	'/assets/yuhaocun/images/snowflake/snowflake3.png',
+	'/assets/yuhaocun/images/snowflake/snowflake4.png',
+	'/assets/yuhaocun/images/snowflake/snowflake5.png',
+	'/assets/yuhaocun/images/snowflake/snowflake6.png'
 ]
 
 ///////
 //飘雪花 //
 ///////
  function snowflake() {
- 	
+
 	// 雪花容器
 	var $flakeContainer = $("#snowflake");
 
@@ -81,7 +81,7 @@ var snowflakeURL = [
 			endPositionTop    = visualHeight - 40,
 			endPositionLeft   = startPositionLeft - 100 + Math.random() * 500,
 			duration          = visualHeight * 10 +Math.random() * 5000;
-			
+
 		// 随机透明度，不小于0.5
 		var randomStart = Math.random();
 		randomStart = randomStart < 0.5 ? startOpacity : randomStart;

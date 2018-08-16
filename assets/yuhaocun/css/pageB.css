@@ -3,17 +3,17 @@
 .b_background {
 	width: 100%;
 	height: 100%;
-	background-image: url(../images/QixiB-dark.png);
+	background-image: url(/assets/yuhaocun/images/QixiB-dark.png);
 	background-size: 100% 100%;
 	position: absolute;
 }
 
 .b_background_preload {
-    background-image: url(../images/QixiB-bright.png);
+    background-image: url(/assets/yuhaocun/images/QixiB-bright.png);
 }
 
 .lamp-bright {
-    background-image: url(../images/QixiB-bright.png);
+    background-image: url(/assets/yuhaocun/images/QixiB-bright.png);
 }
 
 /*商店*/
@@ -45,13 +45,13 @@
 
 .door-left {
     left: 0%;
-    background: url(../images/door-left.png);
+    background: url(/assets/yuhaocun/images/door-left.png);
     background-size: 100% 100%;
 }
 
 .door-right {
     left: 50%;
-    background: url(../images/door-right.png);
+    background: url(/assets/yuhaocun/images/door-right.png);
     background-size: 100% 100%;
 }
 
@@ -64,7 +64,7 @@
     position: absolute;
     z-index: 10;
     right: -91px;
-    background: url(../images/bird.png) -182px 0px no-repeat;
+    background: url(/assets/yuhaocun/images/bird.png) -182px 0px no-repeat;
 }
 
 .birdFly {
