@@ -25,4 +25,3 @@ Now, back to the subject of the blog. This blog is primarily a tech blog. I buil
 
 The topics of the blog articles should be primarily about Python, deep learning and data mining, which is my main research area. Sometimes it may also be about remote sensing, which I work on as a research assistant in the lab. I'm not sure how often I would update it but I will try my best.
 
-And last but not the least, my profile picture is actually my cat, a Scottish fold little boy. If you are also a cat lover, we have a lot to talk. Btw, I'm thinking of doing a project of developing an AI tool to recognize my cat's face. Cats sometimes look similar, especially with the same breed. It should be an interesting project. I'll definitely write a blog article about it when I'm finished. Anyway, shoot me an [email](mailto:sfan2@lsu.edu) if you have any questions or just want to talk with me, for whatever reason.
